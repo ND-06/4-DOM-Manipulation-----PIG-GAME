@@ -16,14 +16,14 @@
 }
 
 body {
-    background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(back.jpg);
+    background-image: url('water.jpg');
     background-size: cover;
     background-position: center;
     font-family: Lato;
     font-weight: 300;
     position: relative;
     height: 100vh;
-    color: #555;
+    color: #fff;
 }
 
 .wrapper {
@@ -66,11 +66,11 @@ body {
     text-align: center;
     font-size: 80px;
     font-weight: 100;
-    color: #EB4D4D;
+    color: #eb4d4d;
     margin-bottom: 130px;
 }
 
-.active { background-color: #f7f7f7; }
+.active {background-color: #3490a0;}
 .active .player-name { font-weight: 300; }
 
 .active .player-name::after {
@@ -108,7 +108,7 @@ button {
     width: 200px;
     left: 50%;
     transform: translateX(-50%);
-    color: #555;
+    color: #EB4D4D;
     background: none;
     border: none;
     font-family: Lato;
@@ -150,5 +150,5 @@ i {
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
 }
 
-.winner { background-color: #f7f7f7; }
-.winner .player-name { font-weight: 300; color: #EB4D4D; }
+.winner { background-color: #yellow; }
+.winner .player-name { font-weight: 300; color: red; }
