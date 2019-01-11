@@ -16,15 +16,16 @@
 }
 
 body {
-    background-image: url('water.jpg');
     background-size: cover;
     background-position: center;
-    font-family: Lato;
+    background-image: url('nature.jpg');
+    font-family: arial;
     font-weight: 300;
     position: relative;
     height: 100vh;
     color: #fff;
 }
+
 
 .wrapper {
     width: 1000px;
@@ -32,7 +33,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
+    background-color: #A2AEBB;
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
     overflow: hidden;
 }
@@ -65,42 +66,46 @@ body {
 .player-score {
     text-align: center;
     font-size: 80px;
-    font-weight: 100;
-    color: #eb4d4d;
+    font-weight: 300;
+    color: white;
     margin-bottom: 130px;
 }
 
-.active {background-color: #3490a0;}
-.active .player-name { font-weight: 300; }
+.active {background-color: #1B9AAA;}
+
+.active .player-name { font-weight: 300
+; }
 
 .active .player-name::after {
     content: "\2022";
     font-size: 47px;
     position: absolute;
-    color: #EB4D4D;
+    color: #fff;
     top: -7px;
     right: 10px;
     
 }
 
 .player-current-box {
-    background-color: #EB4D4D;
+    
     color: #fff;
     width: 40%;
     margin: 0 auto;
     padding: 12px;
     text-align: center;
+    border-radius: 7px;
 }
 
 .player-current-label {
     text-transform: uppercase;
-    margin-bottom: 10px;
-    font-size: 12px;
-    color: #222;
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-weight: 200;
+    color: #fff;
 }
 
 .player-current-score {
-    font-size: 30px;
+    font-size: 27px;
 }
 
 button {
@@ -108,14 +113,14 @@ button {
     width: 200px;
     left: 50%;
     transform: translateX(-50%);
-    color: #EB4D4D;
+    color: #fff;
     background: none;
     border: none;
     font-family: Lato;
-    font-size: 20px;
-    text-transform: uppercase;
+    font-size: 23px;
+    text-transform: capitalize;
     cursor: pointer;
-    font-weight: 300;
+    font-weight: 900;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -127,9 +132,9 @@ button:focus {
 }
 
 i {
-    color: #EB4D4D;
+    color: #fff;
     display: inline-block;
-    margin-right: 15px;
+    margin-right: 9px;
     font-size: 32px;
     line-height: 1;
     vertical-align: text-top;
@@ -150,5 +155,24 @@ i {
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
 }
 
-.winner { background-color: #yellow; }
+.winner { background-color: red;
+    opacity: 0.5;
+ }
 .winner .player-name { font-weight: 300; color: red; }
+
+ul {
+    list-style: none;
+    font-weight: 500;
+    color: grey;
+}
+
+.rulestitle {
+    color:  #00d1b2;
+    font-weight: 700;
+    text-align: center;
+    margin-left: 120px;
+}
+
+.closebutton {
+    color: #00d1b2;  
+}
