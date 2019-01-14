@@ -1,4 +1,5 @@
 /*
+
 GAME RULES:
 
 - The game has 2 players, playing in rounds
@@ -7,11 +8,18 @@ GAME RULES:
 - The player can choose to 'Hold', which means that his ROUND score gets added to his GLBAL score. After that, it's the next player's turn
 - The first player to reach 100 points on GLOBAL score wins the game
 
-*/
+  Coding Challenges:
 
-// We start to create the most important variables for our game
+  1. A player looses his ENTIRE score when he rolls two 6 in a row. 
+  After that, it is the next player's turn. (Hint: Always save the previous dice roll in a separate)
+  2. Add an input field to the HTML where players can set the winning score, so that they can change the predefined 
+  score of 100.(Hint: You can read the value with the .value property in JavaScript. This is a good opportunity
+  to use Google to figure it out.)
+  */
 
-var scores, roundScore, activePlayer, gamePlaying;
+  // We start to create the most important variables for our game
+
+var scores, roundScore, activePlayer, gamePlaying,lastDice;
 
 init();
 
@@ -54,17 +62,28 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
   diceDOM.style.display = "block";
   diceDOM.src = 'dice-' + dice + '.png';
 
-  if (dice !== 1) {    
-    //add score  
+
+
+if (dice === 6 && lastDice === 6) {      
+  //add score
+  scores[activePlayer] = 0;  
+  document.querySelector('#score-' + activePlayer).textContent = '0';
+  document.querySelector('#current-' + activePlayer).textContent = '0';  
+  setTimeout(nextPlayer, 700);
+  lastDice = 0;
+
+  } else if (dice !== 1) {
     roundScore += dice;
-    document.querySelector('#current-' + activePlayer).textContent = roundScore;  
-    } else {
-    setTimeout(nextPlayer, 700);
+    document.querySelector('#current-' + activePlayer).textContent = roundScore;
+    lastDice = 0;  
+  }
+    else {
+    document.querySelector('#current-' + activePlayer).textContent = '0';  
+    setTimeout(nextPlayer, 700);  
     }
   }
+  lastDice = dice;
 });
-
-
 
 
 document.querySelector('.btn-hold').addEventListener('click', function() {
@@ -78,8 +97,10 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
     document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
 
     // Check if player won the game
+    
+    var x = document.querySelector('#winningScore').value;
 
-    if (scores[activePlayer] >= 100) {
+    if (scores[activePlayer] >= x) {
       document.querySelector("#name-" + activePlayer).textContent = "Winner!";
       document.querySelector(".dice").style.display = "none";
       document.querySelector('.player-' + activePlayer + '-panel').classList.add("winner");
@@ -112,9 +133,4 @@ function nextPlayer() {
 }
 
 document.querySelector('.btn-new').addEventListener('click', init);
-
-
-
-
-
 

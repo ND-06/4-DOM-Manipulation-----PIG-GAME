@@ -157,6 +157,7 @@ i {
 .winner { background-color: #F0C808;
   opacity: 1;
  }
+ 
 .winner .player-name { font-weight: 700; color: white; }
 
 ul {
@@ -176,4 +177,20 @@ ul {
   background-color: #17a2b8;  
   border-color: #17a2b8;
   margin-bottom: 5px;
+}
+
+label {
+  font-weight: 700;
+  font-size: 1.25rem;
+
+}
+
+.winningDiv {
+  margin-left: 150px;
+}
+
+input {
+  width: 80px;
+  color: #17a2b8;
+  font-weight: 700;
 }
