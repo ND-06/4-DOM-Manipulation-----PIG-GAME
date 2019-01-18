@@ -12,4 +12,5 @@ Rules of Pig Game :
 Coding challenges : 1. A player looses his Entire score when he rolls two 6 in a row. After that, it's the next player's turn. (Hint: Always save the previous dice roll in a separate variable)
 2. Add an input field to the HTML where players can set the winning score, so that they can change the predefined score of 100. (Hint: you can read that value with the .value property in JavaScript. This is a good oportunity to use google to figure this out :)
 
-
+Production link :
+https://natdenice.github.io/4-DOM-Manipulation-----PIG-GAME/.
